@@ -114,7 +114,15 @@ const registerLink = document.getElementById('registerLink');
 const registerBtn = document.getElementById('registerBtn');
 const cfg = (window.HACKATHON_CONFIG||{});
 if (registerLink && cfg.registrationUrl) registerLink.href = cfg.registrationUrl;
-if (registerBtn && cfg.registrationUrl && cfg.registrationUrl !== '#') registerBtn.href = cfg.registrationUrl;
+if (registerBtn && cfg.registrationUrl && cfg.registrationUrl !== '#') {
+  registerBtn.href = cfg.registrationUrl;
+}
+
+// Open external links in new tab
+document.querySelectorAll('a[href^="http"]').forEach(a => {
+  a.setAttribute('target','_blank');
+  if (!a.getAttribute('rel')) a.setAttribute('rel','noopener');
+});
 
 // Modal: What is hackathon?
 const whatBtn = document.getElementById('whatIsHackathon');
