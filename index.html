@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бизнес‑хакатон 2025 — Алматинский экономический колледж</title>
+    <meta name="description" content="Внутриколледжный междисциплинарный бизнес‑хакатон 2025, посвящённый Дню Республики. Регистрация до 17.10.2025. Тематика — FoodTech.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="nav">
+        <div class="container nav__inner">
+            <a href="#home" class="logo"><img src="aec-logo.png" alt="Алматинский экономический колледж" class="logo__img"><span class="logo__text">AEC Hackathon ‘25</span></a>
+            <nav class="menu" id="menu">
+                <a href="#about">О хакатоне</a>
+                <a href="#goals">Цели и задачи</a>
+                <a href="#participants">Участники</a>
+                <a href="#timeline">Этапы</a>
+                <a href="#criteria">Критерии</a>
+                <a href="#awards">Награды</a>
+                <a href="#faq">Положения</a>
+            </nav>
+            <a href="#register" class="btn btn--sm btn--ghost">Регистрация</a>
+            <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main id="home">
+        <section class="hero">
+            <canvas id="bg-canvas" aria-hidden="true"></canvas>
+            <div class="container hero__content">
+                <div class="hero__grid">
+                    <div class="hero__left">
+                        <h1><span class="grad">Бизнес‑хакатон 2025</span> в АЭК</h1>
+                        <p class="lead">Междисциплинарный интенсив по FoodTech, посвящённый Дню Республики. Создай MVP за 2 дня вместе с командой.</p>
+                        <div class="hero__meta">
+                            <div class="meta">
+                                <span>Брифинг</span>
+                                <strong>20.10.2025</strong>
+                            </div>
+                            <div class="meta">
+                                <span>Интенсив</span>
+                                <strong>20–21.10.2025</strong>
+                            </div>
+                            <div class="meta">
+                                <span>Дедлайн регистрации</span>
+                                <strong id="deadline-date">16.10.2025</strong>
+                            </div>
+                        </div>
+                        <div class="hero__cta">
+                            <a id="registerBtn" class="btn btn--lg" href="#register">Зарегистрироваться</a>
+                            <a class="btn btn--lg btn--ghost" href="#timeline">Посмотреть этапы</a>
+                            <button class="btn btn--lg btn--ghost" id="whatIsHackathon">Что такое хакатон?</button>
+                        </div>
+                        <div class="countdown" id="countdown" aria-live="polite">
+                            <div><span id="cd-days">00</span><small>дней</small></div>
+                            <div><span id="cd-hours">00</span><small>часов</small></div>
+                            <div><span id="cd-mins">00</span><small>мин</small></div>
+                            <div><span id="cd-secs">00</span><small>сек</small></div>
+                        </div>
+                    </div>
+                    <div class="hero__right">
+                        <img src="aec-logo.png" alt="Логотип АЭК" class="hero__logo-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container grid-2">
+                <div>
+                    <h2>О хакатоне</h2>
+                    <p>Положение регламентирует цели, задачи, порядок организации и проведения междисциплинарного бизнес‑хакатона в Алматинском экономическом колледже. Хакатон ориентирован на разработку MVP стартапов в сфере FoodTech.</p>
+                    <ul class="tags">
+                        <li>Организаторы: Администрация, КДМ, профильные кафедры, IT‑отдел</li>
+                        <li>Тематика: FoodTech</li>
+                        <li>Формат: 2‑дневный интенсив + презентации</li>
+                    </ul>
+                </div>
+                <div class="card highlight">
+                    <h3>Что вы создадите</h3>
+                    <p>MVP цифрового решения: сайт, приложение или бот, а также бизнес‑модель и презентацию для жюри.</p>
+                    <div class="pill-list">
+                        <span class="pill">MVP</span>
+                        <span class="pill">UX/UI</span>
+                        <span class="pill">Маркетинг</span>
+                        <span class="pill">Финмодель</span>
+                        <span class="pill">ИИ</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="goals" class="section section--alt">
+            <div class="container">
+                <h2>Цель и задачи</h2>
+                <div class="cards cards-3">
+                    <div class="card">
+                        <h3>Цель</h3>
+                        <p>Создать образовательную среду, моделирующую запуск стартапа, развивая практические навыки и сотрудничество.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Soft skills</h3>
+                        <p>Командная работа, коммуникация, тайм‑менеджмент, публичные выступления.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Практика</h3>
+                        <p>Опыт применения профильных знаний, генерация перспективных идей и проектов внутри колледжа.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="participants" class="section">
+            <div class="container">
+                <h2>Участники и роли</h2>
+                <p>Команды по 3–5 человек, сформированные Оргкомитетом. Каждый участник состоит только в одной команде.</p>
+                <div class="roles">
+                    <div class="role">
+                        <h3>Экономисты</h3>
+                        <p>Анализ рынка, финансовый план, маркетинг и продвижение.</p>
+                    </div>
+                    <div class="role">
+                        <h3>Технологи</h3>
+                        <p>Концепция продукта/услуги, содержательное наполнение.</p>
+                    </div>
+                    <div class="role">
+                        <h3>IT‑специалисты</h3>
+                        <p>Техническая реализация: прототип сайта/приложения/бота.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="timeline" class="section section--alt">
+            <div class="container">
+                <h2>Этапы проведения</h2>
+                <div class="timeline">
+                    <div class="t-item">
+                        <div class="t-date">13.10.2025</div>
+                        <div class="t-body">
+                            <h3>Подготовка и регистрация</h3>
+                            <p>Анонс мероприятия, сбор заявок через Google‑форму.</p>
+                        </div>
+                    </div>
+                    <div class="t-item">
+                        <div class="t-date">до 16.10.2025</div>
+                        <div class="t-body">
+                            <h3>Формирование команд</h3>
+                            <p>Оргкомитет формирует междисциплинарные команды и уведомляет участников.</p>
+                        </div>
+                    </div>
+                    <div class="t-item">
+                        <div class="t-date">20.10.2025</div>
+                        <div class="t-body">
+                            <h3>Брифинг</h3>
+                            <p>Установочная встреча, раздача кейсов, знакомство с менторами.</p>
+                        </div>
+                    </div>
+                    <div class="t-item">
+                        <div class="t-date">20–21.10.2025</div>
+                        <div class="t-body">
+                            <h3>Проведение хакатона</h3>
+                            <p><strong>Интенсив</strong> — это ускорённый формат работы в короткие сроки с высокой концентрацией задач, когда команды погружаются в проект, быстро принимают решения и показывают результат уже к финалу.</p>
+                            <ul>
+                                <li>День 1: открытие, кейсы, командная работа, менторские сессии</li>
+                                <li>День 2: доработка, подготовка презентаций, выступления и итоги</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="criteria" class="section">
+            <div class="container">
+                <h2>Критерии оценки (100 баллов)</h2>
+                <div class="accordion" id="criteriaAccordion">
+                    <!-- Practical relevance -->
+                    <details>
+                        <summary>1. Практическая значимость и актуальность — 20</summary>
+                        <ul class="score">
+                            <li>Четкость проблемы — 0–4</li>
+                            <li>Целевая аудитория — 0–4</li>
+                            <li>Рыночный потенциал — 0–4</li>
+                            <li>Применимость — 0–4</li>
+                            <li>Конкурентное преимущество — 0–4</li>
+                        </ul>
+                    </details>
+                    <!-- Economics -->
+                    <details>
+                        <summary>2. Экономическая обоснованность — 15</summary>
+                        <ul class="score">
+                            <li>Финансовая модель — 0–5</li>
+                            <li>Рентабельность и окупаемость — 0–4</li>
+                            <li>Рынок и маркетинг — 0–3</li>
+                            <li>Реалистичность расчетов — 0–3</li>
+                        </ul>
+                    </details>
+                    <!-- Tech & Design -->
+                    <details>
+                        <summary>3. Техническая реализация и дизайн — 15</summary>
+                        <ul class="score">
+                            <li>Функциональность прототипа — 0–4</li>
+                            <li>UX — 0–4</li>
+                            <li>UI — 0–4</li>
+                            <li>Технологическая адекватность — 0–3</li>
+                        </ul>
+                    </details>
+                    <!-- AI -->
+                    <details>
+                        <summary>4. Внедрение и использование ИИ — 15</summary>
+                        <ul class="score">
+                            <li>Целесообразность применения — 0–5</li>
+                            <li>Функциональность ИИ‑компонента — 0–5</li>
+                            <li>Новизна и ценность — 0–5</li>
+                        </ul>
+                    </details>
+                    <!-- Presentation -->
+                    <details>
+                        <summary>5. Качество презентации и выступления — 15</summary>
+                        <ul class="score">
+                            <li>Структура и ясность — 0–5</li>
+                            <li>Убедительность — 0–4</li>
+                            <li>Тайм‑менеджмент — 0–3</li>
+                            <li>Вовлеченность команды — 0–3</li>
+                        </ul>
+                    </details>
+                    <!-- Innovation -->
+                    <details>
+                        <summary>6. Инновационность и креативность — 10</summary>
+                        <ul class="score">
+                            <li>Оригинальность подхода — 0–5</li>
+                            <li>Новизна решения — 0–5</li>
+                        </ul>
+                    </details>
+                    <!-- Interdisciplinary -->
+                    <details>
+                        <summary>7. Междисциплинарное взаимодействие — 10</summary>
+                        <ul class="score">
+                            <li>Сбалансированность ролей — 0–4</li>
+                            <li>Синтез идей — 0–3</li>
+                            <li>Слаженность работы — 0–3</li>
+                        </ul>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section id="awards" class="section section--alt">
+            <div class="container grid-2">
+                <div>
+                    <h2>Награждение</h2>
+                    <ul class="check">
+                        <li>Дипломы и призы за 1‑3 места</li>
+                        <li>Специальные номинации от жюри и партнёров</li>
+                        <li>Сертификаты для всех участников</li>
+                        <li>Рекомендация лучших проектов к дальнейшей реализации</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Права и использование материалов</h3>
+                    <p>Права на интеллектуальную собственность принадлежат авторам. Организаторы могут использовать материалы для некоммерческих отчётов и промо с указанием авторства.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="register" class="section section--cta">
+            <div class="container cta">
+                <h2>Успейте зарегистрироваться до 16.10.2025 (включительно)</h2>
+                <p>Форма регистрации открыта до конца дня 17 октября. Сформируем сильные междисциплинарные команды и начнём 20 октября!</p>
+                <a id="registerLink" class="btn btn--xl" href="#" target="_blank" rel="noopener">Открыть Google‑форму</a>
+                <small class="muted">Вы можете заменить ссылку прямо в коде или через виджет настроек.</small>
+                <div class="social">
+                    <a class="social__link" href="https://www.instagram.com/p/DPvClfCjIOO/?igsh=MWU5MGF0ZjF2eGFiMA%3D%3D" target="_blank" rel="noopener" aria-label="Дополнительная информация в Instagram">
+                        <svg class="ig" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zM18 6.75a1.25 1.25 0 1 1-1.25 1.25A1.25 1.25 0 0 1 18 6.75z"/></svg>
+                        <span>Доп. информация</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="section">
+            <div class="container">
+                <h2>Дополнительные положения</h2>
+                <div class="accordion">
+                    <details>
+                        <summary>Академическая честность</summary>
+                        <p>Участники обязаны соблюдать правила академической честности и уважать участников, менторов и организаторов.</p>
+                    </details>
+                    <details>
+                        <summary>Требования к проектам</summary>
+                        <p>Проект включает MVP цифрового решения, бизнес‑модель и презентацию с анализом ЦА, финансовой моделью и планом маркетинга.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div>© 2025 Алматинский экономический колледж — Разработчик: Диас Маратов</div>
+            <div class="footer__links">
+                <a href="#about">О хакатоне</a>
+                <a href="#criteria">Критерии</a>
+                <a href="#register">Регистрация</a>
+                <a href="https://www.instagram.com/p/DPvClfCjIOO/?igsh=MWU5MGF0ZjF2eGFiMA%3D%3D" target="_blank" rel="noopener" class="footer__ig" aria-label="Instagram: доп. информация">
+                    <svg class="ig" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zM18 6.75a1.25 1.25 0 1 1-1.25 1.25A1.25 1.25 0 0 1 18 6.75z"/></svg>
+                    <span>Доп. информация</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal: Что такое хакатон? -->
+    <dialog id="hackathonDialog">
+        <form method="dialog" class="modal">
+            <h3>Что такое хакатон?</h3>
+            <p>Хакатон — это событийный формат, в рамках которого команды за ограниченное время создают рабочий прототип решения (MVP). Участники совместно прорабатывают идею, дизайн, бизнес‑модель и техническую часть, чтобы представить результат жюри к финалу.</p>
+            <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:8px">
+                <button class="btn btn--ghost">Закрыть</button>
+                <a class="btn" href="#timeline">К этапам</a>
+            </div>
+        </form>
+    </dialog>
+
+    <script>
+        window.HACKATHON_CONFIG = {
+            registrationUrl: "https://forms.gle/MhYeEfSRUKCpKdzr7"
+        };
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
