@@ -101,6 +101,9 @@ dialog{border:0;border-radius:16px;padding:0;background:transparent}
 
 /* Responsive */
 @media (max-width:980px){
+  .hero__grid{grid-template-columns:1fr;gap:16px}
+  .hero__right{order:-1}
+  .menu{gap:12px}
   .cards-3{grid-template-columns:1fr 1fr}
   .roles{grid-template-columns:1fr 1fr}
   .grid-2{grid-template-columns:1fr}
@@ -113,9 +116,13 @@ dialog{border:0;border-radius:16px;padding:0;background:transparent}
   .menu.open{display:flex;flex-direction:column}
   .burger{display:inline-block}
   .hero__meta{flex-direction:column}
+  .hero__cta{flex-direction:column;align-items:stretch}
+  .hero__cta .btn{width:100%;text-align:center}
   .cards-3{grid-template-columns:1fr}
   .roles{grid-template-columns:1fr}
   .countdown div{min-width:72px}
+  .footer__inner{flex-direction:column;gap:10px}
+  .footer__links{flex-wrap:wrap;justify-content:center}
 }
 
 /* Micro‑interactions */
