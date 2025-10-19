@@ -160,7 +160,7 @@ try{
   document.querySelectorAll('a[href$="index-kz.html"],a[href$="assignment-kz.html"]').forEach(a=>{
     a.addEventListener('click',()=>localStorage.setItem('langChosen','kz'));
   });
-  document.querySelectorAll('a[href$="index.html"],a[href$="assignment-ru.html"]').forEach(a=>{
+  document.querySelectorAll('a[href$="index.html"],a[href$="assignment-ru.html"],a[aria-label="Русская версия"]').forEach(a=>{
     a.addEventListener('click',()=>localStorage.setItem('langChosen','ru'));
   });
 }catch(e){}
