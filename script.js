@@ -72,7 +72,7 @@ function tickRoadmap(){
     const anchorItem = items[Math.min(targetIndex, items.length-1)];
     const listTop = items[0].offsetTop;
     const itemTop = anchorItem.offsetTop;
-    const relY = itemTop - listTop + 14; // align to dot center (matches CSS .t-item:before top)
+    const relY = itemTop - listTop + 14; // align to dot center
     agent.style.top = relY + 'px';
     // Hide active dot when agent is on it (replace dot)
     items.forEach((it, idx) => {
