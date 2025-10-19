@@ -72,10 +72,10 @@ h2{font-size:32px;margin:0 0 12px}
 /* Timeline */
 .timeline{position:relative;margin-top:18px;padding-top:24px}
 .timeline:before{content:"";position:absolute;left:18px;top:24px;bottom:0;width:2px;background:linear-gradient(var(--brand1),var(--brand2))}
-.t-item{position:relative;padding-left:52px;margin:18px 0}
-.t-item:before{content:"";position:absolute;left:10px;top:38px;width:16px;height:16px;border-radius:50%;background:var(--brand2);box-shadow:0 0 0 4px rgba(35,214,209,.15);opacity:calc(1 - var(--hideDot, 0))}
-.timeline .t-body{padding-left:24px}
-.t-date{color:var(--accent);font-weight:700;margin-bottom:6px}
+.t-item{position:relative;padding-left:52px;margin:18px 0;display:flex;align-items:center;gap:12px}
+.t-item:before{content:"";position:absolute;left:10px;top:50%;transform:translateY(-50%);width:16px;height:16px;border-radius:50%;background:var(--brand2);box-shadow:0 0 0 4px rgba(35,214,209,.15);opacity:calc(1 - var(--hideDot, 0))}
+.timeline .t-body{padding-left:0}
+.t-date{color:var(--accent);font-weight:700;margin-bottom:6px;margin-right:10px;white-space:nowrap;min-width:110px}
 /* Roadmap agent (moving character) */
 .roadmap-agent{position:absolute;left:20px;top:0;transform:translate(-50%,-50%);width:26px;height:26px;border-radius:50%;background:#fff;color:#0b1020;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;box-shadow:0 6px 16px rgba(0,0,0,.3);border:2px solid var(--brand2);z-index:1;animation:pulse 2s infinite ease-in-out}
 .roadmap-agent:before{content:"";position:absolute;inset:-18px;border-radius:50%;background:radial-gradient(circle, rgba(35,214,209,.35), transparent 70%);filter:blur(2px);animation:glow 2s infinite ease-in-out}
@@ -151,10 +151,10 @@ dialog{border:0;border-radius:16px;padding:0;background:transparent}
   .roles{grid-template-columns:1fr}
   .countdown div{min-width:72px}
   .timeline:before{left:16px}
-  .t-item{padding-left:44px}
-  .t-item:before{left:8px;top:38px;width:14px;height:14px}
-  .timeline .t-body{padding-left:16px}
-  .t-date{top:0;min-width:0}
+  .t-item{padding-left:44px;gap:10px}
+  .t-item:before{left:8px;top:50%;transform:translateY(-50%);width:14px;height:14px}
+  .timeline .t-body{padding-left:0}
+  .t-date{min-width:90px}
   .roadmap-agent{left:18px;transform:translate(-50%,-50%)}
   .footer__inner{flex-direction:column;gap:10px}
   .footer__links{flex-wrap:wrap;justify-content:center}
@@ -176,9 +176,9 @@ dialog{border:0;border-radius:16px;padding:0;background:transparent}
   .countdown div{min-width:58px;padding:6px 8px}
   .countdown span{font-size:18px}
   .timeline:before{left:18px}
-  .t-item{padding-left:46px}
-  .t-item:before{left:8px;top:38px;width:14px;height:14px}
-  .t-date{top:0;min-width:0}
+  .t-item{padding-left:46px;gap:8px}
+  .t-item:before{left:8px;top:50%;transform:translateY(-50%);width:14px;height:14px}
+  .t-date{min-width:80px}
   .roadmap-agent{left:20px;width:24px;height:24px}
   .roadmap-agent{animation:pulse-xs 2s infinite ease-in-out}
 }
