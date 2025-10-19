@@ -59,16 +59,21 @@ function tickRoadmap(){
   if (cdEls.hours) cdEls.hours.textContent = pad(h);
   if (cdEls.mins) cdEls.mins.textContent = pad(m);
   if (cdEls.secs) cdEls.secs.textContent = pad(s);
-  if (stageLabelEl) stageLabelEl.textContent = 'До следующего этапа: ' + ns.step.label;
+  if (stageLabelEl) {
+    const isKazakh = document.documentElement.lang === 'kk';
+    const prefix = isKazakh ? 'Келесі кезеңге дейін: ' : 'До следующего этапа: ';
+    stageLabelEl.textContent = prefix + ns.step.label.split(' / ')[isKazakh?1:0];
+  }
   // Move agent along timeline if present
   const agent = document.querySelector('.roadmap-agent');
   const items = Array.from(document.querySelectorAll('.timeline .t-item'));
   if (agent && items.length){
     const targetIndex = Math.max(0, ns.idx - 1);
     const anchorItem = items[Math.min(targetIndex, items.length-1)];
+    const dot = anchorItem.querySelector('.t-date') || anchorItem;
     const listTop = items[0].offsetTop;
     const itemTop = anchorItem.offsetTop;
-    const relY = itemTop - listTop + 8;
+    const relY = itemTop - listTop + (dot ? 6 : 8);
     agent.style.top = relY + 'px';
   }
 }
