@@ -25,7 +25,8 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
 .btn--sm{padding:8px 12px;font-size:14px}
 .btn:hover{transform:translateY(-1px)}
 /* Accent button for Assignment */
-.btn--accent{background:linear-gradient(135deg,var(--accent),#ffd48b);color:#1b2035}
+.btn--accent{background:linear-gradient(135deg,var(--accent),#ffd48b);color:var(--brand1)}
+.menu .btn{padding:8px 12px;font-size:14px}
 
 /* Hero */
 .hero{position:relative;min-height:86vh;display:flex;align-items:center;overflow:hidden}
@@ -75,6 +76,7 @@ h2{font-size:32px;margin:0 0 12px}
 .t-date{color:var(--accent);font-weight:700;margin-bottom:6px}
 /* Roadmap agent (moving character) */
 .roadmap-agent{position:absolute;left:-2px;top:0;transform:translate(-50%,0);width:26px;height:26px;border-radius:50%;background:#fff;color:#0b1020;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;box-shadow:0 6px 16px rgba(0,0,0,.3);border:2px solid var(--brand2);}
+.timeline{overflow:hidden}
 
 /* Accordion */
 details{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:12px 14px;margin:10px 0}
@@ -88,6 +90,12 @@ summary{cursor:pointer;font-weight:700}
 .muted{color:var(--muted)}
 /* Special font for hackathon info button */
 #whatIsHackathon{font-family:Montserrat,Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+
+/* Countdown next stage label */
+.next-stage-label{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);display:inline-block;margin-top:6px;padding:6px 10px;border-radius:10px;color:#c0c7d4;font-size:12px}
+
+/* Card spacing on assignment pages */
+.card + .card{margin-top:16px}
 
 /* Modal */
 dialog{border:0;border-radius:16px;padding:0;background:transparent}
@@ -128,6 +136,9 @@ dialog{border:0;border-radius:16px;padding:0;background:transparent}
   .cards-3{grid-template-columns:1fr}
   .roles{grid-template-columns:1fr}
   .countdown div{min-width:72px}
+  .timeline:before{left:8px}
+  .t-item{padding-left:28px}
+  .roadmap-agent{left:-4px;transform:translate(0,0);}
   .footer__inner{flex-direction:column;gap:10px}
   .footer__links{flex-wrap:wrap;justify-content:center}
 }

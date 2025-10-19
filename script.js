@@ -24,9 +24,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 // Countdown to next roadmap stage with label and roadmap agent
 const cdEls = { days: document.getElementById('cd-days'), hours: document.getElementById('cd-hours'), mins: document.getElementById('cd-mins'), secs: document.getElementById('cd-secs') };
 const stageLabelEl = document.createElement('div');
-stageLabelEl.style.marginTop = '6px';
-stageLabelEl.style.color = '#c0c7d4';
-stageLabelEl.style.fontSize = '12px';
+stageLabelEl.className = 'next-stage-label';
 const countdownEl = document.getElementById('countdown');
 if (countdownEl) countdownEl.appendChild(stageLabelEl);
 
@@ -68,9 +66,9 @@ function tickRoadmap(){
   if (agent && items.length){
     const targetIndex = Math.max(0, ns.idx - 1);
     const anchorItem = items[Math.min(targetIndex, items.length-1)];
-    const rect = anchorItem.getBoundingClientRect();
-    const parentRect = anchorItem.parentElement.getBoundingClientRect();
-    const relY = rect.top - parentRect.top + 8 + window.scrollY;
+    const listTop = items[0].offsetTop;
+    const itemTop = anchorItem.offsetTop;
+    const relY = itemTop - listTop + 8;
     agent.style.top = relY + 'px';
   }
 }
@@ -149,5 +147,22 @@ const dialog = document.getElementById('hackathonDialog');
 if (whatBtn && dialog && dialog.showModal) {
   whatBtn.addEventListener('click', () => dialog.showModal());
 }
+
+// Default language redirect: open Kazakh version by default
+try{
+  const isRootRU = location.pathname.endsWith('/index.html') || /\\index.html$/.test(location.pathname) || location.pathname.endsWith('/') || location.pathname === '';
+  const isAssignmentRU = location.pathname.endsWith('/assignment-ru.html') || /assignment-ru.html$/.test(location.pathname);
+  const hasChosen = localStorage.getItem('langChosen');
+  if (!hasChosen){
+    if (isRootRU){ location.replace('index-kz.html'); }
+    if (isAssignmentRU){ location.replace('assignment-kz.html'); }
+  }
+  document.querySelectorAll('a[href$="index-kz.html"],a[href$="assignment-kz.html"]').forEach(a=>{
+    a.addEventListener('click',()=>localStorage.setItem('langChosen','kz'));
+  });
+  document.querySelectorAll('a[href$="index.html"],a[href$="assignment-ru.html"]').forEach(a=>{
+    a.addEventListener('click',()=>localStorage.setItem('langChosen','ru'));
+  });
+}catch(e){}
 
 
