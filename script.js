@@ -74,6 +74,17 @@ function tickRoadmap(){
     const itemTop = anchorItem.offsetTop;
     const relY = itemTop - listTop + 14; // align to dot center (matches CSS .t-item:before top)
     agent.style.top = relY + 'px';
+    // Hide active dot when agent is on it (replace dot)
+    items.forEach((it, idx) => {
+      const dot = it;
+      if (idx === Math.min(targetIndex, items.length-1)) {
+        dot.style.setProperty('--hideDot','1');
+        it.classList.add('active-stage');
+      } else {
+        dot.style.removeProperty('--hideDot');
+        it.classList.remove('active-stage');
+      }
+    });
   }
 }
 tickRoadmap();
@@ -154,12 +165,14 @@ if (whatBtn && dialog && dialog.showModal) {
 
 // Default language redirect: open Kazakh version by default
 try{
-  const isRootRU = location.pathname.endsWith('/index.html') || /\\index.html$/.test(location.pathname) || location.pathname.endsWith('/') || location.pathname === '';
-  const isAssignmentRU = location.pathname.endsWith('/assignment-ru.html') || /assignment-ru.html$/.test(location.pathname);
-  const hasChosen = localStorage.getItem('langChosen');
-  if (!hasChosen){
-    if (isRootRU){ location.replace('index-kz.html'); }
-    if (isAssignmentRU){ location.replace('assignment-kz.html'); }
+  const path = location.pathname;
+  const href = location.href.toLowerCase();
+  const isRootRU = /index\.html$/i.test(path) || path.endsWith('/') || path === '';
+  const isAssignmentRU = /assignment-ru\.html$/i.test(path);
+  const chosen = localStorage.getItem('langChosen');
+  if (chosen !== 'ru'){
+    if (isRootRU && document.documentElement.lang === 'ru') { location.replace('index-kz.html'); }
+    if (isAssignmentRU && document.documentElement.lang === 'ru') { location.replace('assignment-kz.html'); }
   }
   document.querySelectorAll('a[href$="index-kz.html"],a[href$="assignment-kz.html"]').forEach(a=>{
     a.addEventListener('click',()=>localStorage.setItem('langChosen','kz'));

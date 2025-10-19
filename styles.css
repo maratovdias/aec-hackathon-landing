@@ -73,7 +73,7 @@ h2{font-size:32px;margin:0 0 12px}
 .timeline{position:relative;margin-top:18px}
 .timeline:before{content:"";position:absolute;left:14px;top:6px;bottom:0;width:2px;background:linear-gradient(var(--brand1),var(--brand2))}
 .t-item{position:relative;padding-left:40px;margin:18px 0}
-.t-item:before{content:"";position:absolute;left:6px;top:14px;width:16px;height:16px;border-radius:50%;background:var(--brand2);box-shadow:0 0 0 4px rgba(35,214,209,.15)}
+.t-item:before{content:"";position:absolute;left:6px;top:14px;width:16px;height:16px;border-radius:50%;background:var(--brand2);box-shadow:0 0 0 4px rgba(35,214,209,.15);opacity:calc(1 - var(--hideDot, 0))}
 .t-date{color:var(--accent);font-weight:700;margin-bottom:6px}
 /* Roadmap agent (moving character) */
 .roadmap-agent{position:absolute;left:11px;top:0;transform:translate(-50%,-50%);width:26px;height:26px;border-radius:50%;background:#fff;color:#0b1020;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;box-shadow:0 6px 16px rgba(0,0,0,.3);border:2px solid var(--brand2);z-index:1;animation:pulse 2s infinite ease-in-out}
@@ -133,9 +133,13 @@ dialog{border:0;border-radius:16px;padding:0;background:transparent}
   .hero__right{order:-1;margin-top:-40px}
   .hero__logo-img{width:min(380px,70vw);max-width:100%;height:auto}
   .lead{font-size:14px}
-  .meta{padding:10px 12px}
-  .meta strong{font-size:14px}
-  .hero__cta .btn{padding:12px 16px;font-size:14px}
+  .meta{padding:8px 10px}
+  .meta strong{font-size:13px}
+  .hero__cta{gap:10px}
+  .hero__cta .btn{padding:10px 14px;font-size:13px}
+  .countdown{gap:12px}
+  .countdown div{min-width:66px;padding:8px 10px}
+  .countdown span{font-size:20px}
   .menu{display:none;position:absolute;top:58px;left:0;right:0;background:rgba(11,16,32,.96);padding:12px;border-bottom:1px solid rgba(255,255,255,.06)}
   .menu.open{display:flex;flex-direction:column}
   .burger{display:inline-block}
