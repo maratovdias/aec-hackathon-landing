@@ -70,10 +70,9 @@ function tickRoadmap(){
   if (agent && items.length){
     const targetIndex = Math.max(0, ns.idx - 1);
     const anchorItem = items[Math.min(targetIndex, items.length-1)];
-    const dot = anchorItem.querySelector('.t-date') || anchorItem;
     const listTop = items[0].offsetTop;
     const itemTop = anchorItem.offsetTop;
-    const relY = itemTop - listTop + (dot ? 6 : 8);
+    const relY = itemTop - listTop + 14; // align to dot center (matches CSS .t-item:before top)
     agent.style.top = relY + 'px';
   }
 }
