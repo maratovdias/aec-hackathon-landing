@@ -70,8 +70,8 @@ h2{font-size:32px;margin:0 0 12px}
 .role{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:16px}
 
 /* Timeline */
-.timeline{position:relative;margin-top:18px}
-.timeline:before{content:"";position:absolute;left:18px;top:6px;bottom:0;width:2px;background:linear-gradient(var(--brand1),var(--brand2))}
+.timeline{position:relative;margin-top:18px;padding-top:24px}
+.timeline:before{content:"";position:absolute;left:18px;top:24px;bottom:0;width:2px;background:linear-gradient(var(--brand1),var(--brand2))}
 .t-item{position:relative;padding-left:52px;margin:18px 0}
 .t-item:before{content:"";position:absolute;left:10px;top:14px;width:16px;height:16px;border-radius:50%;background:var(--brand2);box-shadow:0 0 0 4px rgba(35,214,209,.15);opacity:calc(1 - var(--hideDot, 0))}
 .timeline .t-body{padding-left:24px}
