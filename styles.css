@@ -158,6 +158,25 @@ dialog{border:0;border-radius:16px;padding:0;background:transparent}
   .card{padding:16px}
 }
 
+/* Ultra small screens ~400px */
+@media (max-width:420px){
+  .hero h1{font-size:28px}
+  .hero__content{padding:64px 0 44px}
+  .lead{font-size:13px}
+  .meta{padding:7px 9px}
+  .meta span{font-size:11px}
+  .meta strong{font-size:12px}
+  .hero__cta{gap:8px}
+  .hero__cta .btn{padding:9px 12px;font-size:12px}
+  .countdown{gap:10px}
+  .countdown div{min-width:58px;padding:6px 8px}
+  .countdown span{font-size:18px}
+  .timeline:before{left:12px}
+  .t-item{padding-left:34px}
+  .t-item:before{left:4px;top:14px;width:14px;height:14px}
+  .roadmap-agent{left:12px;width:24px;height:24px}
+}
+
 /* Micro‑interactions */
 [data-animate]{opacity:0;transform:translateY(14px);transition:all .6s ease}
 [data-animate].in{opacity:1;transform:translateY(0)}
