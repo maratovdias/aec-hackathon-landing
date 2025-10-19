@@ -219,4 +219,10 @@ dialog{border:0;border-radius:16px;padding:0;background:transparent}
 [data-animate]{opacity:0;transform:translateY(14px);transition:all .6s ease}
 [data-animate].in{opacity:1;transform:translateY(0)}
 
+/* Disable animations on assignment pages for mobile */
+@media (max-width:720px){
+  body:has(main.section) [data-animate]{opacity:1;transform:translateY(0);transition:none}
+  body:has(main.section) [data-animate].in{opacity:1;transform:translateY(0)}
+}
+
 
