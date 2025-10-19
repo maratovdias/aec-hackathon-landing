@@ -25,9 +25,10 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
 .btn--sm{padding:8px 12px;font-size:14px}
 .btn:hover{transform:translateY(-1px)}
 /* Accent button for Assignment */
-.btn--accent{background:linear-gradient(135deg,var(--accent),#ffd48b);color:var(--deepBlue)}
+.btn--accent{background:linear-gradient(135deg,var(--accent),#ffd48b);color: #0b1020}
 .btn--accent:hover{filter:brightness(1.02)}
 .menu .btn{padding:8px 12px;font-size:14px}
+.menu .btn--accent{color:#0b1020}
 
 /* Hero */
 .hero{position:relative;min-height:86vh;display:flex;align-items:center;overflow:hidden}
@@ -73,11 +74,11 @@ h2{font-size:32px;margin:0 0 12px}
 .timeline{position:relative;margin-top:18px;padding-top:24px}
 .timeline:before{content:"";position:absolute;left:18px;top:24px;bottom:0;width:2px;background:linear-gradient(var(--brand1),var(--brand2))}
 .t-item{position:relative;padding-left:52px;margin:18px 0;display:block}
-.t-item:before{content:"";position:absolute;left:10px;top:14px;transform:none;width:16px;height:16px;border-radius:50%;background:var(--brand2);box-shadow:0 0 0 4px rgba(35,214,209,.15);opacity:calc(1 - var(--hideDot, 0))}
+.t-item:before{content:"";position:absolute;left:18px;top:14px;transform:translateX(-50%);width:16px;height:16px;border-radius:50%;background:var(--brand2);box-shadow:0 0 0 4px rgba(35,214,209,.15);opacity:calc(1 - var(--hideDot, 0))}
 .timeline .t-body{padding-left:0;display:block;margin-top:6px}
 .t-date{color:var(--accent);font-weight:700;margin:0;display:block}
 /* Roadmap agent (moving character) */
-.roadmap-agent{position:absolute;left:20px;top:0;transform:translate(-50%,-50%);width:26px;height:26px;border-radius:50%;background:#fff;color:#0b1020;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;box-shadow:0 6px 16px rgba(0,0,0,.3);border:2px solid var(--brand2);z-index:1;animation:pulse 2s infinite ease-in-out}
+.roadmap-agent{position:absolute;left:18px;top:0;transform:translate(-50%,-50%);width:26px;height:26px;border-radius:50%;background:#fff;color:#0b1020;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;box-shadow:0 6px 16px rgba(0,0,0,.3);border:2px solid var(--brand2);z-index:1;animation:pulse 2s infinite ease-in-out}
 .roadmap-agent:before{content:"";position:absolute;inset:-18px;border-radius:50%;background:radial-gradient(circle, rgba(35,214,209,.35), transparent 70%);filter:blur(2px);animation:glow 2s infinite ease-in-out}
 @keyframes pulse{0%,100%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.385)}}
 @keyframes glow{0%,100%{opacity:.4}50%{opacity:.8}}
@@ -152,7 +153,7 @@ dialog{border:0;border-radius:16px;padding:0;background:transparent}
   .countdown div{min-width:72px}
   .timeline:before{left:16px}
   .t-item{padding-left:44px}
-  .t-item:before{left:8px;top:12px;transform:none;width:14px;height:14px}
+  .t-item:before{left:16px;top:12px;transform:translateX(-50%);width:14px;height:14px}
   .timeline .t-body{padding-left:0}
   .t-date{min-width:0}
   .roadmap-agent{left:18px;transform:translate(-50%,-50%)}
@@ -177,13 +178,12 @@ dialog{border:0;border-radius:16px;padding:0;background:transparent}
   .countdown span{font-size:18px}
   .timeline:before{left:18px}
   .t-item{padding-left:46px}
-  .t-item:before{left:8px;top:12px;transform:none;width:14px;height:14px}
+  .t-item:before{left:18px;top:12px;transform:translateX(-50%);width:14px;height:14px}
   .t-date{min-width:0}
   .roadmap-agent{left:20px;width:24px;height:24px}
   .roadmap-agent{animation:pulse-xs 2s infinite ease-in-out}
 }
 @keyframes pulse-xs{0%,100%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.417)}}
-}
 
 /* Micro‑interactions */
 [data-animate]{opacity:0;transform:translateY(14px);transition:all .6s ease}
