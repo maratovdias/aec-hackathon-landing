@@ -215,14 +215,12 @@ dialog{border:0;border-radius:16px;padding:0;background:transparent}
 }
 @keyframes pulse-xs{0%,100%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.417)}}
 
-/* Micro‑interactions */
-[data-animate]{opacity:0;transform:translateY(14px);transition:all .6s ease}
+/* Micro‑interactions - DISABLED */
+[data-animate]{opacity:1;transform:translateY(0);transition:none}
 [data-animate].in{opacity:1;transform:translateY(0)}
 
-/* Disable animations on assignment pages for mobile */
-@media (max-width:720px){
-  body:has(main.section) [data-animate]{opacity:1;transform:translateY(0);transition:none}
-  body:has(main.section) [data-animate].in{opacity:1;transform:translateY(0)}
-}
+/* Disable animations on assignment pages for all devices */
+body:has(main.section) [data-animate]{opacity:1;transform:translateY(0);transition:none}
+body:has(main.section) [data-animate].in{opacity:1;transform:translateY(0)}
 
 
